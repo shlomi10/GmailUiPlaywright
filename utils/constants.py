@@ -1,3 +1,5 @@
 BASE_URL = "https://www.google.com/"
-SEARCH_TERM = "pixel 9 pro xl"
-DEVICE_NAME = "Google Pixel 9 Pro XL"
+FIRST_NAME = "abyABYany"
+LAST_NAME = "abyABYany"
+DAY_OF_WEEK = "7"
+YEAR = "1980"

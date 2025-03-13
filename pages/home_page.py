@@ -10,7 +10,7 @@ This file contains the main search page, where you can make search
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.story("First article page")
+@allure.story("main search page")
 class Homepage(BasePage):
     def __init__(self, page):
         super().__init__(page)

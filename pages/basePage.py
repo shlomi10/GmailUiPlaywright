@@ -13,6 +13,10 @@ class BasePage:
         """Click an element (expects a Locator)."""
         element.click()
 
+    def click_on_first_element(self, element: Locator):
+        """Click on first element (expects a Locator)."""
+        element.first.click()
+
     def type(self, element: Locator, text: str):
         """Type an input field (expects a Locator)."""
         element.type(text)
