@@ -16,7 +16,8 @@ class TestGoogleWorkspace:
     @pytest.fixture(autouse=True)
     def setup(self, initialize):
         """Initialize driver and page objects before each test"""
-        self.page, self.home_page, self.google_workspace_page, self.create_account_page, self.basic_information_page, self.choose_email_address_page= initialize
+        (self.page, self.home_page, self.google_workspace_page, self.create_account_page, self.basic_information_page,
+         self.choose_email_address_page, self.create_password_page)= initialize
 
     @allure.story("validate the google workspace function")
     @allure.description("validate user registration is working")
@@ -31,5 +32,6 @@ class TestGoogleWorkspace:
             self.create_account_page.enter_first_and_last_name(FIRST_NAME, LAST_NAME)
             self.basic_information_page.fill_month_day_year_gender(DAY_OF_WEEK, YEAR)
             self.choose_email_address_page.select_first_email_account()
+            self.create_password_page.create_password(TEST_PWD, TEST_PWD)
             print()
           #  assert actual_device_name == DEVICE_NAME, f'Google Pixel 9 Pro XL was not at the page, actual device is {actual_device_name}'

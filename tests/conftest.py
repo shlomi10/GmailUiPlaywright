@@ -6,6 +6,7 @@ import pytest
 from playwright.sync_api import sync_playwright
 
 from pages.choose_email_address import ChooseEmailAddress
+from pages.create_password_page import CreatePasswordPage
 from pages.google_workspace_page import GoogleWorkspacePage
 from pages.home_page import Homepage
 from pages.basic_information_page import BasicInformationPage
@@ -33,7 +34,8 @@ def initialize(request):
         create_account_page = CreateAccountPage(page)
         basic_information_page = BasicInformationPage(page)
         choose_email_address_page = ChooseEmailAddress(page)
-        yield page, home_page, google_workspace_page, create_account_page, basic_information_page, choose_email_address_page
+        create_password_page = CreatePasswordPage(page)
+        yield page, home_page, google_workspace_page, create_account_page, basic_information_page, choose_email_address_page,create_password_page
 
         # Capture screenshot if test fails
         if hasattr(request.node, "rep_call") and request.node.rep_call.failed:  # Checks if test failed

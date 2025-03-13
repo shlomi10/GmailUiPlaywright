@@ -17,9 +17,9 @@ class BasePage:
         """Click on first element (expects a Locator)."""
         element.first.click()
 
-    def type(self, element: Locator, text: str):
+    def type(self, element: Locator, text: str, delay: int = 100):
         """Type an input field (expects a Locator)."""
-        element.type(text)
+        element.type(text, delay=delay)
 
     def fill(self, element: Locator, text: str):
         """Fill an input field (expects a Locator)."""
@@ -45,9 +45,10 @@ class BasePage:
         """Check if an element is visible (expects a Locator)."""
         return element.is_visible()
 
-    def wait_for_element_to_be_visible(self, element: Locator, timeout: int = 5000):
+    def wait_for_element_to_be_visible(self, element: str, timeout: int = 5000):
         """Wait for an element to be visible (expects a Locator)."""
-        element.wait_for(state="visible", timeout=timeout)
+        self.page.wait_for_selector(selector=element, timeout=timeout)
+        #element.wait_for(state="visible", timeout=timeout)
 
     def take_screenshot(self, path: str = "screenshot.png"):
         """Take a screenshot of the page."""

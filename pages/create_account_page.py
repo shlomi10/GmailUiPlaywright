@@ -18,6 +18,6 @@ class CreateAccountPage(BasePage):
 
     @allure.step("enter first name and last name")
     def enter_first_and_last_name(self, first_name: str, last_name: str) -> None:
-        self.fill(self.__first_name, first_name)
-        self.fill(self.__last_name, last_name)
+        self.type(self.__first_name, first_name)
+        self.type(self.__last_name, last_name)
         self.click(self.__nextBTN)
