@@ -9,7 +9,7 @@ This file contains the basic information page
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.story("basic information page page")
+@allure.story("basic information page")
 class BasicInformationPage(BasePage):
     def __init__(self, page):
         super().__init__(page)

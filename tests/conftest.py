@@ -10,7 +10,7 @@ from pages.create_password_page import CreatePasswordPage
 from pages.google_workspace_page import GoogleWorkspacePage
 from pages.home_page import Homepage
 from pages.basic_information_page import BasicInformationPage
-
+from pages.confirm_not_robot_page import ConfirmNotRobotPage
 from pages.create_account_page import CreateAccountPage
 
 
@@ -35,7 +35,8 @@ def initialize(request):
         basic_information_page = BasicInformationPage(page)
         choose_email_address_page = ChooseEmailAddress(page)
         create_password_page = CreatePasswordPage(page)
-        yield page, home_page, google_workspace_page, create_account_page, basic_information_page, choose_email_address_page,create_password_page
+        confirm_youre_not_robot_page = ConfirmNotRobotPage(page)
+        yield page, home_page, google_workspace_page, create_account_page, basic_information_page, choose_email_address_page,create_password_page, confirm_youre_not_robot_page
 
         # Capture screenshot if test fails
         if hasattr(request.node, "rep_call") and request.node.rep_call.failed:  # Checks if test failed

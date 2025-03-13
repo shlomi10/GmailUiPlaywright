@@ -8,7 +8,7 @@ This file contains the google workspace
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.story("First article page")
+@allure.story("google workspace page")
 class GoogleWorkspacePage(BasePage):
     def __init__(self, page):
         super().__init__(page)
