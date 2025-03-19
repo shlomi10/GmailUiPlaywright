@@ -1,0 +1,8 @@
+allure_python_commons==2.13.5
+playwright==1.50.0
+pytest==8.3.5
+pytest_playwright==0.7.0
+pytest-html-reporter==0.2.9
+pur==7.3.3
+Faker==37.0.0
+
