@@ -43,10 +43,7 @@ python -m pytest -s tests/ --html-report=./reports
 python -m pytest -s -n auto tests/ --html-report=./reports
 ```
 
-When no browser is selected, Chromium will be used by default. To specify a different browser, use the --browser option. For example, to run tests in Firefox:
-```
-pytest --browser=firefox
-```
+When no browser is selected, Chromium will be used by default.
 
 * Run tests in pytest:
 
